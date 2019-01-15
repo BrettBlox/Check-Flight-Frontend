@@ -48,7 +48,6 @@ class Calendar extends Component {
     this.setState({ available: json });
   };
 
-<<<<<<< HEAD
   prevMonth = (e) => {
     let month = this.state.currentMonth
     let year = this.state.currentYear
@@ -58,31 +57,6 @@ class Calendar extends Component {
     }
 
     let date = new Date(year, month - 1)
-=======
-  prevMonth = e => {
-    let months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    ];
-    let month = this.state.currentMonth;
-    let year = this.state.currentYear;
-    if (month - 1 < 0) {
-      month += 12;
-      year -= 1;
-    }
-
-    let date = new Date(`${months[month]} ${year}`);
->>>>>>> 3e031f37151bfcac2592df1e5e6edf8893a38dec
 
     this.setState({
       currentTime: date,
@@ -91,7 +65,6 @@ class Calendar extends Component {
     });
   };
 
-<<<<<<< HEAD
   nextMonth = (e) => {
     let month = this.state.currentMonth
     let year = this.state.currentYear
@@ -101,31 +74,7 @@ class Calendar extends Component {
     }
 
     let date = new Date(year, month + 1)
-=======
-  nextMonth = e => {
-    let months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    ];
-    let month = this.state.currentMonth;
-    let year = this.state.currentYear;
-    if (month + 1 >= 12) {
-      month -= 12;
-      year += 1;
-    }
 
-    let date = new Date(`${months[month]} ${year}`);
->>>>>>> 3e031f37151bfcac2592df1e5e6edf8893a38dec
 
     this.setState({
       currentTime: date,
